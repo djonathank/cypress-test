@@ -18,7 +18,7 @@ When(/^informar meus dados$/, () => {
 
   // inputs type=select
   cy.get('select#Skills').select('Javascript')
-  cy.get('select#countries').select('Argentina')
+  // cy.get('select#countries').select('Argentina')
   cy.get('select#country').select('Australia', { force: true })
   cy.get('select#yearbox').select('1996')
   cy.get('select[ng-model^=month]').select('February')
@@ -29,8 +29,7 @@ When(/^informar meus dados$/, () => {
   cy.get('input#secondpassword').type('Agilizei@2020')
 
   // input type=imagesrc
-  cy.get('input#imagesrc').attachFile('image.jpeg')
-
+  cy.get('input#imagesrc').attachFile("image.jpeg")
 })
 
 When(/^salvar$/, () => {

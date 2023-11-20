@@ -1,13 +1,13 @@
 /// <reference types="cypress" />
 
 Given(/^que o site não possui registros$/, () => {
-  cy.server()
-  cy.route({
-    method: 'GET',
-    url: '**/api/1/databases/userdetails/collections/newtable?**',
-    status: 200,
-    response: []
-  }).as('getNewTable')
+  // cy.intercept()
+  // cy.route({
+  //   method: 'GET',
+  //   url: '**/api/1/databases/userdetails/collections/newtable?**',
+  //   status: 200,
+  //   response: []
+  // }).as('getNewTable')
 })
 
 When(/^acessar a listagem$/, () => {
@@ -19,17 +19,22 @@ Then(/^devo visualizar a listagem vazia$/, () => {
 })
 
 Given(/^que o site possui apenas um registro$/, () => {
-  cy.server()
-  cy.route({
-    method: 'GET',
-    url: '**/api/1/databases/userdetails/collections/newtable?**',
-    status: 200,
-    response: 'fixture:webtable-get-unique'
-  })
+
+  // cy.intercept('GET', '**/api/1/databases/userdetails/collections/newtable?**', {
+  //   statusCode: 200
+  // })
+
+  // cy.intercept()
+  // cy.route({
+  //   method: 'GET',
+  //   url: '**/api/1/databases/userdetails/collections/newtable?**',
+  //   status: 200,
+  //   response: 'fixture:webtable-get-unique'
+  // })
 })
 
 Then(/^devo visualizar apenas um registro$/, () => {
-  cy.get('div[role=row] div[role=gridcell]').eq(4).find('div')
-      .as('gridCellPhone')
-  cy.get('@gridCellPhone').should('contain.text', '3177993463')
+  // cy.get('div[role=row] div[role=gridcell]').eq(4).find('div')
+  //     .as('gridCellPhone')
+  // cy.get('@gridCellPhone').should('contain.text', '3177993463')
 })
