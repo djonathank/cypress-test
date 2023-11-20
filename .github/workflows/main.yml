@@ -24,12 +24,13 @@ jobs:
     # Initialize Node.js Environment
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     
-    - name: Setup Node.js environment
-      uses: actions/setup-node@v2.1.1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
       with:
         node-version:  ${{ matrix.node-version }}
+        cache: 'npm'
         
     - run: npm install
     - run: npm run cy:run:cucumber
