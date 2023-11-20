@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "cy:open:cucumber": "npx cypress open",
+    "cy:run:cucumber": "npx cypress run --spec **/All.features ",
     "report:merge": "mochawesome-merge > full_report.json",
     "report:mocha": "marge full_report.json",
     "report:clean": "rm -rf mochawesome full_report.json cypress/cucumberJson/**",
@@ -21,6 +23,7 @@
   },
   "homepage": "https://github.com/djonathank/cypress-test#readme",
   "devDependencies": {
+    "chance": "^1.1.11",
     "cypress": "^13.5.1",
     "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-multi-reporters": "^1.6.4",
@@ -29,12 +32,13 @@
     "mochawesome-merge": "^4.3.0",
     "mochawesome-report-generator": "^6.2.0"
   },
-  "cypress-cucumber-preprocessor":{
+  "cypress-cucumber-preprocessor": {
     "noGlobalStepDefinitions": true,
+    "step_definitions": "cypress/e2e/steps",
     "cucumberJson": {
       "generate": true,
       "outputFolder": "cypress/reports/cucumber-json",
-      "filePrefix":"",
+      "filePrefix": "",
       "fileSuffix": ".cucumber"
     }
   }
