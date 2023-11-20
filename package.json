@@ -6,7 +6,8 @@
   "scripts": {
     "report:merge": "mochawesome-merge > full_report.json",
     "report:mocha": "marge full_report.json",
-    "report:clean": "rm -rf mochawesome full_report.json"
+    "report:clean": "rm -rf mochawesome full_report.json cypress/cucumberJson/**",
+    "report:cucumber": "node cypress/cucumberJson/reporter.js"
   },
   "repository": {
     "type": "git",
