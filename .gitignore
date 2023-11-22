@@ -2,15 +2,15 @@
 node_modules/
 
 # mocha reports
-mochawesome-report
+# mochawesome-report
 
 # cucumber reports
-cypress/reports/index.html
-cypress/reports/cucumber_report.html.json
-cypress/reports/cucumber-json/**
+# cypress/reports/index.html
+# cypress/reports/cucumber_report.html.json
+# cypress/reports/cucumber-json/**
 
 # videos
-cypress/videos
+# cypress/videos
 
 # others
 .DS_Store

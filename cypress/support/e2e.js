@@ -15,11 +15,21 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
-import 'cypress-file-upload';
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
 Cypress.on('uncaught:exception', (err, runnable) => {
   return false
+})
+
+beforeEach(() => {
+  cy.log("TESTE INICIADO.")
+  cy.log("CENARIO: ", Cypress.currentTest.title)
+  cy.visit('/')
+})
+
+afterEach(() => {
+ cy.log("TESTE FINALIZADO.")
+ cy.log("STATUS: ", Cypress.mocha.getRunner().suite.ctx.currentTest.state)
 })

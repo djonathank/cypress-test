@@ -8,9 +8,12 @@ module.exports = defineConfig({
       on('file:preprocessor', cucumber())
     },
      baseUrl: "http://demo.automationtesting.in/",
-     specPattern: "**/*.{feature,features}",
+     specPattern: "cypress/e2e/features/*.{feature,features}",
      video: true,
-     watchForFileChanges: false,
+     videoCompression: 15,
+     videosFolder:"cypress/reports/videos",
+     screenshotsFolder:"cypress/reports/screenshots",
+     watchForFileChanges: true,
      experimentalSourceRewriting: true,
      reporter: "cypress-multi-reporters",
      reporterOptions: {

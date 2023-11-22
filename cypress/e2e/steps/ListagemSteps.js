@@ -1,13 +1,9 @@
 /// <reference types="cypress" />
+import {Given, When, Then} from 'cypress-cucumber-preprocessor/steps'
+import ListagemPage from '../pageobjects/ListagemPage'
+const listagemPage = new ListagemPage
 
 Given(/^que o site não possui registros$/, () => {
-  // cy.intercept()
-  // cy.route({
-  //   method: 'GET',
-  //   url: '**/api/1/databases/userdetails/collections/newtable?**',
-  //   status: 200,
-  //   response: []
-  // }).as('getNewTable')
 })
 
 When(/^acessar a listagem$/, () => {
@@ -15,26 +11,13 @@ When(/^acessar a listagem$/, () => {
 })
 
 Then(/^devo visualizar a listagem vazia$/, () => {
-  cy.get('div[role=row]').should('have.length', 1)
+  listagemPage.verificaListaVazia();
 })
 
 Given(/^que o site possui apenas um registro$/, () => {
 
-  // cy.intercept('GET', '**/api/1/databases/userdetails/collections/newtable?**', {
-  //   statusCode: 200
-  // })
-
-  // cy.intercept()
-  // cy.route({
-  //   method: 'GET',
-  //   url: '**/api/1/databases/userdetails/collections/newtable?**',
-  //   status: 200,
-  //   response: 'fixture:webtable-get-unique'
-  // })
 })
 
 Then(/^devo visualizar apenas um registro$/, () => {
-  // cy.get('div[role=row] div[role=gridcell]').eq(4).find('div')
-  //     .as('gridCellPhone')
-  // cy.get('@gridCellPhone').should('contain.text', '3177993463')
+
 })
