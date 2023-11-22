@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/djonathank/cypress-test#readme",
   "devDependencies": {
+    "@faker-js/faker": "^8.2.0",
     "chance": "^1.1.11",
     "cypress": "^13.5.1",
     "cypress-cucumber-preprocessor": "^4.3.1",

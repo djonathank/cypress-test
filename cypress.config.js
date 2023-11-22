@@ -7,15 +7,17 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       on('file:preprocessor', cucumber())
     },
-     baseUrl: "http://demo.automationtesting.in/",
+    //  baseUrl: "http://demo.automationtesting.in/",
+     baseUrl: "https://demo.realworld.io/",
      specPattern: "cypress/e2e/features/*.{feature,features}",
      video: true,
      videoCompression: 15,
      videosFolder:"cypress/reports/videos",
      screenshotsFolder:"cypress/reports/screenshots",
      watchForFileChanges: true,
-     experimentalSourceRewriting: true,
+    //  experimentalSourceRewriting: true,
      reporter: "cypress-multi-reporters",
+     chromeWebSecurity: false,
      reporterOptions: {
        configFile: "reporter-config.json"
      }
