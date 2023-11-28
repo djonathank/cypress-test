@@ -8,7 +8,8 @@ module.exports = defineConfig({
       on('file:preprocessor', cucumber())
     },
     //  baseUrl: "http://demo.automationtesting.in/",
-     baseUrl: "https://demo.realworld.io/",
+    //  baseUrl: "https://demo.realworld.io/",
+     baseUrl: "https://www.automationpractice.pl",
      specPattern: "cypress/e2e/features/*.{feature,features}",
      video: true,
      videoCompression: 15,
