@@ -26,7 +26,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 beforeEach(() => {
   cy.log("TESTE INICIADO.")
   cy.log("CENARIO: ", Cypress.currentTest.title)
-  cy.visit('/')
+  // cy.visit('/')
 })
 
 afterEach(() => {

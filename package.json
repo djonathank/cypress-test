@@ -49,6 +49,7 @@
     }
   },
   "dependencies": {
-    "cucumber-html-reporter": "^7.1.1"
+    "cucumber-html-reporter": "^7.1.1",
+    "cy-spok": "^1.6.2"
   }
 }
