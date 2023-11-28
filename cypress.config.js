@@ -7,8 +7,6 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       on('file:preprocessor', cucumber())
     },
-    //  baseUrl: "http://demo.automationtesting.in/",
-    //  baseUrl: "https://demo.realworld.io/",
      baseUrl: "https://www.automationpractice.pl",
      specPattern: "cypress/e2e/features/*.{feature,features}",
      video: true,
@@ -22,5 +20,5 @@ module.exports = defineConfig({
      reporterOptions: {
        configFile: "reporter-config.json"
      }
-  },
+  }
 });

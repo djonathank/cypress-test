@@ -5,14 +5,16 @@
   "main": "index.js",
   "scripts": {
     "cy:open:cucumber": "npx cypress open",
-    "cy:run:cucumber": "npx cypress run",
+    "cy:run:cucumber:electron": "npx cypress run",
+    "cy:run:cucumber:chorme": "npx cypress run --browser chrome",
+    "cy:run:cucumber:edge": "npx cypress run --browser edge",
     "cy:report:merge": "npx mochawesome-merge -f ./cypress/reports/mochawesome/*.json -o cypress/reports/full_report.json",
     "cy:report:mocha": "marge full_report.json",
     "cy:report:clean": "rm cypress/reports/mochawesome/* cypress/reports/videos/* cypress/reports/screenshots/* cypress/reports/cucumber-json/*",
     "cy:full_report:clean": "rm cypress/reports/full_report.json",
     "cy:report_html:clean": "rm cypress/reports/html/*",
     "cy:report:cucumber": "node cypress/reports/reporter.js",
-    "cy:test:tags": "npx cypress run --tag @focus"
+    "cy:test:tags": "npx cypress run --record --key b88a2e1d-3b0b-4151-a139-9cc3ccc87fc1 --tag '@login_sucesso'"
   },
   "repository": {
     "type": "git",
